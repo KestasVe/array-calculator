@@ -1,0 +1,10 @@
+<div class="row justify-content-center">
+    <h1>PATH CALCULATOR</h1>
+    <form class="form-inline" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="number" class="sr-only">Number</label>
+            <input type="number" name="number" class="form-control" required id="number" placeholder="Add a number" [ngModel]="item.entry">
+        </div>
+        <button type="submit" [disabled]="!itemForm.valid" class="btn btn-primary mb-2">Add</button>
+    </form>
+</div>

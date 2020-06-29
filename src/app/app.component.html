@@ -1,0 +1,8 @@
+<div class="container text-center">
+  <app-add-item-container (formSubmit)="addNumber($event)"></app-add-item-container>
+  <app-item-list [addedNumbers]="addedNumbers" (delete)="deleteItem($event)" (update)="updateNumber($event)"></app-item-list>
+  <h5 *ngIf="isReachable === undefined">Please insert any numbers to calculate the most efficient path</h5>
+  <h2 *ngIf="isReachable === true" class="green">The last element is reachable!</h2>
+  <h2 *ngIf="isReachable === false" class="red">The last element is not reachable!</h2>
+  <h2 *ngIf="path" class="green">{{ path }}</h2>
+</div>

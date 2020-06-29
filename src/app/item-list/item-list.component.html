@@ -1,0 +1,6 @@
+<h2 [ngClass]="{ 'visible': addedNumbers.length > 0 }">Your added numbers are:</h2>
+<div class="numbers-container">
+    <button (click)="onNumberClick(item)" *ngFor="let item of addedNumbers" type="button" class="number btn btn-outline-info">{{ item.number }}
+        <div class="delete-button" (click)="onDelete(item)"></div>
+    </button>
+</div>
